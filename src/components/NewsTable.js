@@ -24,7 +24,6 @@ const NewsTable = () => {
         console.error('Error fetching news:', error);
       });
   }, []);
-
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentNews = news.slice(indexOfFirstItem, indexOfLastItem);
@@ -32,7 +31,6 @@ const NewsTable = () => {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
   return (
     <div className="container NewsTable">
       <div className="row">
